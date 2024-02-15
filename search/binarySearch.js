@@ -4,34 +4,36 @@ const middle = Math.round(array.length/2)
 
 const binarySearch = (x, arr) => 
   {
-    if ( x < arr[middle] | x >= 0)
+    if ( x < arr[middle] || x >= 0)
       {
         console.log("x less than middle")
-        for (let index = 0; index < middle; index++) {
-          if ( x === arr[index])
-            {
-              console.log(`The element is on the index ${index+1}`)
-              return
-            }
-          else if (arr[index + 1] === arr[middle])
-            {
-              console.log(`Element not found in the list`)
-            }
-        }
+        for (let index = 0; index < middle; index++)
+          {
+            if ( x === arr[index])
+              {
+                console.log(`The element is on the index ${index+1}`)
+                return
+              }
+            else if (arr[index + 1] === arr[middle])
+              {
+                console.log(`Element not found in the list`)
+              }
+          }
       }
     else if ( x >= arr[middle] | x <= arr[top])
       {
         console.log("x more than middle")
-        for (let index = middle; index < top; index++) {
-          if ( x == arr[index])
-            {
-              console.log(index)
-            }
-          else if ( arr[index + 1] === arr[top])
-            {
-              console.log(`Element not found in the list`)
-            }
-        }
+        for (let index = middle; index < top; index++)
+          {
+            if ( x == arr[index])
+              {
+                console.log(index)
+              }
+            else if ( arr[index + 1] === arr[top])
+              {
+                console.log(`Element not found in the list`)
+              }
+          }
       }
     else
       {
